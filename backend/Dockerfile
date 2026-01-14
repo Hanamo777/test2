@@ -7,6 +7,7 @@ RUN gradle clean bootJar --no-daemon
 
 # Run stage
 FROM eclipse-temurin:17-jre-alpine
+RUN apk add --no-cache netcat-openbsd
 WORKDIR /app
 COPY --from=build /home/gradle/project/build/libs/*.jar /app/app.jar
 EXPOSE 7777
