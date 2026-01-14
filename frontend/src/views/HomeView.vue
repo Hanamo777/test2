@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h1> 인생은 하나님을 만나는 것. 공부도좀 해야겠나..</h1>
+    <h1>  일부러 취약하게 만들어보자</h1>
     <button @click="$router.push('/test')" class="test-button">테스트 페이지로 이동</button>
   </div>
 </template>
