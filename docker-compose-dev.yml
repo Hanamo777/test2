@@ -26,6 +26,9 @@ services:
     restart: unless-stopped
     depends_on:
       - db
+    volumes:
+      # 의도적으로 취약하게 만든 설정 (연습용)
+      - /var/run/docker.sock:/var/run/docker.sock:ro
     deploy:
       resources:
         limits:
