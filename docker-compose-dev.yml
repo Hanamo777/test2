@@ -36,6 +36,16 @@ services:
     networks:
       - app_network
 
+  backend-dotnet:
+    build: 
+      context: ./backend-dotnet
+      dockerfile: Dockerfile
+    container_name: backend-dotnet
+    expose:
+      - "3333"
+    restart: unless-stopped
+    networks:
+      - app_network
   db:
     image: mariadb:11.4
     container_name: db
